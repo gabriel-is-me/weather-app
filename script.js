@@ -129,12 +129,12 @@ date_display_container.style.visibility = "hidden";
         weather_display.style.visibility = "visible";
 
         if(WeatherResponseData.current.precipitation > 0){
-            weather_display.src = "images/rain.gif";
-            document.body.style.backgroundImage = "url('images/raining_background.gif')";
+            weather_display.src = "rain.gif";
+            document.body.style.backgroundImage = "url('raining_background.gif')";
         }
         else{
-            weather_display.src= "images/sun.gif";
-            document.body.style.backgroundImage = "url('images/sunny_background.gif')";
+            weather_display.src= "sun.gif";
+            document.body.style.backgroundImage = "url('sunny_background.gif')";
         }
 
         temp_display.innerHTML = `<strong>${WeatherResponseData.current.apparent_temperature}&deg;C</strong>`;

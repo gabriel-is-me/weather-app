@@ -124,8 +124,6 @@ date_display_container.style.visibility = "hidden";
 
         const WeatherResponseData = await WeatherResponse.json();
 
-        console.log(WeatherResponseData)
-
         weather_display.style.visibility = "visible";
 
         if(WeatherResponseData.current.precipitation > 0){
@@ -193,7 +191,7 @@ date_display_container.style.visibility = "hidden";
         }
 }
 
-//15 min in milliseconds is 900000
+//refresh every 15 min to keep live data
 setInterval(() =>{
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(gotLocation, failedLocation);
